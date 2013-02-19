@@ -1,4 +1,6 @@
 class UserController < ApplicationController
+	def client
+	end
 	def login
 		user = param[:user]
 		pswd = param[:password]

@@ -1,5 +1,7 @@
 BackendWarmup::Application.routes.draw do
 	
+  get "user/client"
+
 	post "users/login" => "user#login"
 	post "users/add" => "user#add"
 	post "TESTAPI/resetFixture" => "user#resetFixture"
