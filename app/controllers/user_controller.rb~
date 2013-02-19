@@ -40,6 +40,7 @@ class UserController < ApplicationController
 		UserModel.delete_all()
 		render :json => {:errCode => 1}
 	end
+end
 
 #	def unitTests
 #		numFailed = 0
@@ -115,4 +116,4 @@ class UserController < ApplicationController
 #		render :json => {:totalTests => numRan, :nrFailed => numFailed, :output => result}
 #	end
 
-end
+#end

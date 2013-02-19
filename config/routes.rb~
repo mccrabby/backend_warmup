@@ -1,4 +1,10 @@
 BackendWarmup::Application.routes.draw do
+	match "/client.html" => redirect('/client.html')
+	post "users/login" => "UserController#login"
+	post "users/add" => "UserController#add"
+	post "TESTAPI/resetFixture" => "UserController#resetFixture"
+	post "TESTAPI/unitTests" => "UserController#unitTests"
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -15,7 +21,7 @@ BackendWarmup::Application.routes.draw do
 
   # Sample resource route with options:
   #   resources :products do
-  #     member do
+  #     member 
   #       get 'short'
   #       post 'toggle'
   #     end

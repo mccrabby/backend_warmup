@@ -1,10 +1,4 @@
 class UserController < ApplicationController
-#SUCCESS (1) : a success
-#ERR_BAD_CREDENTIALS (-1) : (for login)
-#ERR_USER_EXISTS (-2) : (for add) 
-#ERR_BAD_USERNAME (-3) : (for add) 
-#ERR_BAD_PASSWORD (-4): (for add) 
-
 	def login
 		user = param[:user]
 		pswd = param[:password]
@@ -40,6 +34,7 @@ class UserController < ApplicationController
 		UserModel.delete_all()
 		render :json => {:errCode => 1}
 	end
+end
 
 #	def unitTests
 #		numFailed = 0
@@ -115,4 +110,4 @@ class UserController < ApplicationController
 #		render :json => {:totalTests => numRan, :nrFailed => numFailed, :output => result}
 #	end
 
-end
+#end
