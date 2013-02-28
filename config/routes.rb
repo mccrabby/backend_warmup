@@ -1,12 +1,9 @@
 BackendWarmup::Application.routes.draw do
-	
-  get "user/client"
 
 	post "users/login" => "user#login"
 	post "users/add" => "user#add"
 	post "TESTAPI/resetFixture" => "user#resetFixture"
 	post "TESTAPI/unitTests" => "user#unitTests"
-
 	match "/client.html" => redirect('/client.html')
 	root :to => "user#client"
 	

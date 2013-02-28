@@ -1,12 +1,11 @@
 BackendWarmup::Application.routes.draw do
-	
-	post "users/login" => "user#login"
-	post "users/add" => "user#add"
-	post "TESTAPI/resetFixture" => "user#resetFixture"
-	post "TESTAPI/unitTests" => "userr#unitTests"
 
+	post "user/login" => "user#login"
+	post "user/add" => "user#add"
+	post "TESTAPI/resetFixture" => "user#resetFixture"
+	post "TESTAPI/unitTests" => "user#unitTests"
 	match "/client.html" => redirect('/client.html')
-	root :to => "users#client"
+	root :to => "user#client"
 	
   # The priority is based upon order of creation:
   # first created -> highest priority.
